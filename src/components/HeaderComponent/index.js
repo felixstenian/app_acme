@@ -5,6 +5,7 @@ import { BsPersonPlus, BsSearch } from 'react-icons/bs'
 import { InputComponent } from '../InputComponent'
 
 import { PatientsContext } from '../../Context/PatientsContext'
+import { handleLogout } from '../../Context/AuthContext'
 
 import { Container } from './styles'
 
@@ -39,7 +40,9 @@ export function HeaderComponent () {
               <BsPersonPlus color='#fff' size={20} />
           </button>
           <div>
-            <button>
+            <button
+              onClick={() => handleLogout}
+            >
               Logout
             </button>
           </div>
