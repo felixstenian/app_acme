@@ -29,6 +29,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
     $ yarn start ou npm start
 
     # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+
+    Para realizar o login Utilize essas credenciais:
+    $ email: rick@email.com,
+    $ password: Password@123
 ```
 
 ### 🛠 Tecnologias
