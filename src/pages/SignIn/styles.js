@@ -26,6 +26,7 @@ export const Content = styled.div`
             width: 160px;
             display: flex;
             padding: 5px;
+            font-weight: 200;
         }
     }
 `
