@@ -5,13 +5,14 @@ import { BsPersonPlus, BsSearch } from 'react-icons/bs'
 import { InputComponent } from '../InputComponent'
 
 import { PatientsContext } from '../../Context/PatientsContext'
-import { handleLogout } from '../../Context/AuthContext'
+import { LoginContext } from '../../Context/AuthContext'
 
 import { Container } from './styles'
 
 export function HeaderComponent () {
   const [search, setSeach] = useState('')
   const { setShowModal, filter } = useContext(PatientsContext)
+  const { handleLogout } = useContext(LoginContext)
 
   useEffect(() => {
     filter(search)
@@ -41,7 +42,7 @@ export function HeaderComponent () {
           </button>
           <div>
             <button
-              onClick={() => handleLogout}
+              onClick={handleLogout}
             >
               Logout
             </button>
