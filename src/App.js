@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Router } from 'react-router-dom'
 
-function App() {
+import { Routes } from './routes'
+import history from './services/history'
+
+import { AuthProvider } from './Context/AuthContext'
+import { PatientsProvider } from './Context/PatientsContext'
+
+import GlobalStyles from './styles/global'
+
+export function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <PatientsProvider>
+      <AuthProvider>
+        <Router history={history}>
+          <Routes />
+          <GlobalStyles/>
+        </Router>
+      </AuthProvider>
+    </PatientsProvider>
+  )
 }
-
-export default App;
