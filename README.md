@@ -15,7 +15,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
     $ git clone <https://github.com/felixstenian/app_acme>
 
     # Acesse a pasta do projeto no terminal/cmd
-    $ cd app_docket
+    $ cd app_acme
 
     # Instale as dependências
     $ yarn install ou npm install
